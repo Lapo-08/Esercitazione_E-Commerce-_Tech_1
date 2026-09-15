@@ -1,59 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Samsung S24</title>
 </head>
 
 <body>
-    <header>
 
+    <header>
+        <p>SHOP</p>
     </header>
-    <section>
-        <div id="container">
-            <div class="prodotto">
-                <div class="tit">
-                    ciao
-                </div>
-                <div class="type">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit possimus blanditiis, itaque perspiciatis iure inventore ipsum error nam sapiente ad repudiandae odit assumenda nisi animi, ipsam consequatur eum veritatis enim?
-                </div>
-                <div class="price">
-                    12.00
-                </div>
-               
+
+    <main>
+        <section id="container">
+
+            <div class="immagine-prodotto">
+                <img src="https://files.refurbed.com/ii/samsung-galaxy-s24-ultra-1705563092.jpg"
+                    alt="Samsung S24">
             </div>
+
             <div class="prodotto">
                 <div class="tit">
-                    ciao
+                    Samsung S24
                 </div>
+
                 <div class="type">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit possimus blanditiis, itaque perspiciatis iure inventore ipsum error nam sapiente ad repudiandae odit assumenda nisi animi, ipsam consequatur eum veritatis enim?
+                    Smartphone Samsung Galaxy S24 con display di alta qualità,
+                    ottime prestazioni e design moderno.
                 </div>
+
                 <div class="price">
-                    12.00
+                    €389.99
                 </div>
+
                 <div class="b">
-                    <button>BUY</button>
+                    <button onclick="addCarrello(1)">BUY</button>
                 </div>
             </div>
-            <div class="prodotto">
-                <div class="tit">
-                    ciao
-                </div>
-                <div class="type">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit possimus blanditiis, itaque perspiciatis iure inventore ipsum error nam sapiente ad repudiandae odit assumenda nisi animi, ipsam consequatur eum veritatis enim?
-                </div>
-                <div class="price">
-                    12.00
-                </div>
-            </div>
-        </div>
-    </section>
+
+        </section>
+
+        <section class="specifiche">
+            <h2>Specifiche tecniche</h2>
+
+            <table>
+                <tr>
+                    <th>Processore</th>
+                    <td>Snapdragon / Exynos</td>
+                </tr>
+                <tr>
+                    <th>RAM</th>
+                    <td>8 GB</td>
+                </tr>
+                <tr>
+                    <th>Display</th>
+                    <td>6.2 pollici</td>
+                </tr>
+                <tr>
+                    <th>Garanzia</th>
+                    <td>24 mesi</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="recensione">
+            <h2>Lascia una recensione</h2>
+
+            <form>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="valutazione">Valutazione</label>
+                <select id="valutazione" name="valutazione" required>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="3">★★★</option>
+                    <option value="2">★★</option>
+                    <option value="1">★</option>
+                </select>
+
+                <label for="messaggio">Messaggio</label>
+                <textarea id="messaggio" name="messaggio" required></textarea>
+
+                <button type="submit">Invia recensione</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>@Lappo previtali</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 
 </html>

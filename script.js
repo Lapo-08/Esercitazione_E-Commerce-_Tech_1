@@ -1,40 +1,37 @@
 let cont = document.getElementById("container");
 
 let prodotto = {
-    name:"",
-    type:"",
-    price:0.0
+    name: "",
+    type: "",
+    price: 0.0
 };
 
 let listaProdotti = [
     {
-        name:"Samsung S24",
-        type:"Telefono",
-        price:389.99
+        name: "Samsung S24",
+        type: "Telefono",
+        price: 389.99
     },
     {
-        name:"Samsung S4",
-        type:"Telefoo",
-        price:389.9
+        name: "Samsung S4",
+        type: "Telefono",
+        price: 389.90
     }
 ];
-let listaCarrello = []
 
-let listaProdottiId = listaProdotti.map((oggetto,indice) => ({...oggetto,id:indice+1}));
+let listaCarrello = [];
 
+let listaProdottiId = listaProdotti.map((oggetto, indice) => ({
+    ...oggetto,
+    id: indice + 1
+}));
 
-console.log(listaProdottiId)
+function addCarrello(id) {
+    let prodotto = listaProdottiId.find(oggetto => oggetto.id === id);
 
-function creaLista() {
-    cont.innerHTML=""
-
-    listaProdottiId.forEach(ogg =>{
-            // TODO fare auto creazione dei div ed ecc
-    })
-}
-
-
-function addCarrel(id) {
-    let prodotto = listaProdottiId.find(id)
-    listaCarrello.push(prodotto)
+    if (prodotto) {
+        listaCarrello.push(prodotto);
+        console.log("Prodotto aggiunto al carrello:", prodotto);
+        console.log("Carrello:", listaCarrello);
+    }
 }
